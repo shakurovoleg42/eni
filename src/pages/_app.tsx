@@ -1,24 +1,13 @@
 import type { AppProps } from "next/app";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
+import '../../public/fonts/gilroy-bold-webfont/style.css'; // Путь к вашему CSS файлу с @font-face
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "../fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "../fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Layout from "@/components/Layout";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-    >
+    <Layout>
       <Component {...pageProps} />
-    </div>
+    </Layout>
   );
 }
