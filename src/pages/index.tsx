@@ -1,3 +1,6 @@
+import About from "@/components/blocks/home/about";
+import Catalog from "@/components/blocks/home/catalog";
+import { Container } from "@/components/Container";
 import Banner from "@/components/share/banner/Banner";
 import Head from "next/head";
 // import useProductStore from "../store/useProductStore";
@@ -19,9 +22,11 @@ export default function HomePage() {
           content="Добро пожаловать на главную страницу."
         />
       </Head>
-      <>
+      <Container>
         <Banner />
-      </>
+        <About />
+        <Catalog />
+      </Container>
     </>
   );
 }
