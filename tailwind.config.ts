@@ -60,6 +60,9 @@ const config: Config = {
         main: "url('/main-page-banner.jpeg')",
         second: "url('/second.png')",
         other: "url('/other.png')",
+        leftCardCatalog: "url('/left-card-catalog.png')",
+        rightCardCatalog: "url('/right-card-catalog.png')",
+
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -72,6 +75,8 @@ const config: Config = {
         "gilroy-heavy": ["Gilroy-Heavy ☞", "sans-serif"],
         "gilroy-light": ["Gilroy-Light ☞", "sans-serif"],
         "gilroy-medium": ["Gilroy-Medium ☞", "sans-serif"],
+        arial: ["Arial", "sans-serif"],
+        openSans: ["Open Sans", "sans-serif"],
       },
     },
   },
