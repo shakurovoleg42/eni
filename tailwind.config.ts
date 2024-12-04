@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "hsl(var(--background))",
+        background: "#ffffff",
         foreground: "hsl(var(--foreground))",
         forms: "rgba(251, 210, 24, 1)",
         card: {
@@ -70,7 +70,7 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        gilroy: ["Gilroy-Regular", "sans-serif"],
+        gilroy: ["Gilroy-Regular ☞", "sans-serif"],
         "gilroy-bold": ["Gilroy-Bold ☞", "sans-serif"],
         "gilroy-heavy": ["Gilroy-Heavy ☞", "sans-serif"],
         "gilroy-light": ["Gilroy-Light ☞", "sans-serif"],
