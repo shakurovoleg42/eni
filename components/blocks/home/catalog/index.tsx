@@ -4,9 +4,9 @@ function Catalog() {
   return (
     <div className="w-full flex flex-col items-center text-black mb-[190px]">
       <span className="flex text-[34.11px] font-gilroy-bold">Каталог</span>
-      <div className="flex flex-col md:flex-row gap-[85px] font-gilroy text-[34px] mt-[35px] ">
-        <div className="flex flex-col items-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between w-[767px] h-[170px] hover:cursor-pointer">
-          <div className="pl-16">
+      <div className="flex flex-col flex-wrap xl:flex-nowrap md:flex-row gap-[85px] font-gilroy text-[34px] mt-[35px] ">
+        <div className="flex flex-col gap-0 lg:gap-20 items-center text-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between max-w-[767px] min-h-[170px] hover:cursor-pointer">
+          <div className="pl-0 xl:pl-16">
             <span>Каталог</span>
           </div>
           <div>
@@ -14,23 +14,25 @@ function Catalog() {
               src="/car-card-home1.png"
               width={298}
               height={81}
-              alt="car-card 2"
+              alt="car-card 1"
             />
           </div>
         </div>
-        <div className="flex flex-col items-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between w-[767px] h-[170px] hover:cursor-pointer">
-          <div className="pl-16">
-            <span>Подбор масел</span>
+        <a target="_blank" href="https://oilproducts.eni.com/en_GB/lube-finder">
+          <div className="flex flex-col gap-0 lg:gap-20 items-center text-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between max-w-[767px] min-h-[170px] hover:cursor-pointer">
+            <div className="pl-0 xl:pl-16">
+              <span>Подбор масел</span>
+            </div>
+            <div>
+              <Image
+                src="/car-card-home2.png"
+                width={298}
+                height={132}
+                alt="car-card 2"
+              />
+            </div>
           </div>
-          <div>
-            <Image
-              src="/car-card-home2.png"
-              width={298}
-              height={132}
-              alt="car-card 2"
-            />
-          </div>
-        </div>
+        </a>
       </div>
       <div className="w-full flex flex-col items-start mt-48">
         <span className="w-full h-[1px] border-b-[7px] border-forms"></span>
@@ -46,7 +48,7 @@ function Catalog() {
           Автомасла AGIP/Eni имеют допуски крупнейших мировых автопроизводителей
         </h3>
         <div>
-          <ul className="flex flex-row gap-24">
+          <ul className="flex flex-row flex-wrap gap-24">
             <li>
               <Image
                 src="/opel-logo.svg"

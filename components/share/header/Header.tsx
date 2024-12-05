@@ -39,7 +39,7 @@ const Header = () => {
               />
             </Link>
           </div>
-          <div className="flex flex-row gap-5 text-center text-[#2D2723] text-[14px] font-gilroy-bold">
+          <div className="hidden md:flex flex-row  gap-5 text-center text-[#2D2723] text-[14px] font-gilroy-bold">
             <Link href='/' className="p-2 hover:bg-white rounded-lg">О компании</Link>
             <Link href='/' className="p-2 hover:bg-white rounded-lg">Автомобильные моторные масла</Link>
             <Link href='/' className="p-2 hover:bg-white rounded-lg">Моторные масла для мотоциклов </Link>
