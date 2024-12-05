@@ -45,7 +45,7 @@ const Header = () => {
             <Link href='/' className="p-2 hover:bg-white rounded-lg">Моторные масла для мотоциклов </Link>
             <Link href='/' className="p-2 hover:bg-white rounded-lg">Смазочные материалы</Link>
             <Link href='/' className="p-2 hover:bg-white rounded-lg">Промышленные смазочные материалы</Link>
-            <Link href='/' className="p-2 hover:bg-white rounded-lg">Связать с нами</Link>
+            <Link href='/contacts' className="p-2 hover:bg-white rounded-lg">Связаться с нами</Link>
           </div>
         </div>
       </div>

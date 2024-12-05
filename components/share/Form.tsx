@@ -1,7 +1,7 @@
-import React from "react";
-import { Button } from "../ui/button";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
+import React from 'react';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
+import { Textarea } from '../ui/textarea';
 
 function Form() {
   return (
@@ -20,7 +20,7 @@ function Form() {
           </Button>
         </div>
       </div>
-      <div className="flex flex-col min-h-[695px] bg-white shadow-lg rounded-[22px] pl-[90px]">
+      <div className="flex flex-col min-h-[695px] bg-white shadow-2xl rounded-[22px] pl-[90px]">
         <span className="mt-[71px] text-[25px] font-[400] leading-[36px]">
           Напишите нам и мы свяжемся с Вами!
         </span>
@@ -44,8 +44,8 @@ function Form() {
           </div>
           <Button
             type="submit"
-            variant={"submit"}
-            size={"submit"}
+            variant={'submit'}
+            size={'submit'}
             className="text-[25px] mt-[73px] font-openSans font-[700]"
           >
             Отправить

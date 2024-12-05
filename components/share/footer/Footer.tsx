@@ -22,7 +22,7 @@ const Footer = () => {
               <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">Навигация</span>
             </div>
             <div>
-              <ul className="flex flex-col text-[11.5px] text-[#636363] mt-3">
+              <ul className="flex flex-col text-[14px] gap-2 text-[#636363] mt-3">
                 <li>
                   <Link href="/">Главная</Link>
                 </li>
@@ -41,7 +41,7 @@ const Footer = () => {
               <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">Каталог</span>
             </div>
             <div>
-              <ul className="flex flex-col text-[11.5px] text-[#636363] mt-3">
+              <ul className="flex flex-col text-[14px] gap-2 text-[#636363] mt-3">
                 <li>
                   <Link href="/">Смазочные материалы</Link>
                 </li>
@@ -62,7 +62,7 @@ const Footer = () => {
               <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">Полезные ссылки</span>
             </div>
             <div>
-              <ul className="flex flex-col text-[11.5px] text-[#636363] mt-3">
+              <ul className="flex flex-col text-[14px] gap-2 text-[#636363] mt-3">
                 <li>
                   <Link href="/">О компании</Link>
                 </li>
@@ -70,7 +70,7 @@ const Footer = () => {
                   <Link href="/">Контакты</Link>
                 </li>
                 <li>
-                  <Link href="/">Связаться с нами</Link>
+                  <Link href="/contacts">Связаться с нами</Link>
                 </li>
                 <li></li>
               </ul>
@@ -81,7 +81,7 @@ const Footer = () => {
               <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">Контакты</span>
             </div>
             <div>
-              <ul className="flex flex-col text-[11.5px] text-[#636363] mt-3">
+              <ul className="flex flex-col text-[14px] gap-2 text-[#636363] mt-3">
                 <li>
                   <Link href="tel:77788181844">+7 (778) 818-18-44</Link>
                 </li>

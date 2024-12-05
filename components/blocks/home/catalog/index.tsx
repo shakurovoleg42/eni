@@ -4,8 +4,8 @@ function Catalog() {
   return (
     <div className="w-full flex flex-col items-center text-black mb-[190px]">
       <span className="flex text-[34.11px] font-gilroy-bold">Каталог</span>
-      <div className="flex flex-col md:flex-row gap-[85px] font-gilroy text-[34px] mt-[35px]">
-        <div className="flex flex-col items-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between w-[767px] h-[170px]">
+      <div className="flex flex-col md:flex-row gap-[85px] font-gilroy text-[34px] mt-[35px] ">
+        <div className="flex flex-col items-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between w-[767px] h-[170px] hover:cursor-pointer">
           <div className="pl-16">
             <span>Каталог</span>
           </div>
@@ -18,7 +18,7 @@ function Catalog() {
             />
           </div>
         </div>
-        <div className="flex flex-col items-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between w-[767px] h-[170px]">
+        <div className="flex flex-col items-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between w-[767px] h-[170px] hover:cursor-pointer">
           <div className="pl-16">
             <span>Подбор масел</span>
           </div>
@@ -36,7 +36,7 @@ function Catalog() {
         <span className="w-full h-[1px] border-b-[7px] border-forms"></span>
         <div className="mt-6">
           <span className="font-gilroy-bold text-[31.26px] text-black text-start">
-            ПОПУЛЯРНЫЕ ТОВАР
+            ПОПУЛЯРНЫЕ ТОВАРЫ
           </span>
         </div>
         <div>{/* Слайдер с продуктами */}</div>
@@ -100,14 +100,14 @@ function Catalog() {
       </div>
       <div className="flex flex-col md:flex-row text-white mt-[120px] gap-8 md:gap-24">
         <div className="bg-leftCardCatalog w-full md:w-[679px] h-auto bg-no-repeat bg-center rounded-2xl">
-          <div className="flex py-[80px] items-start pl-5 hover:cursot">
+          <div className="flex py-[80px] items-start pl-5 hover:cursor-pointer">
             <span className="font-gilroy-bold text-[36px] md:text-[46px]">
               Заказать онлайн
             </span>
           </div>
         </div>
         <div className="bg-rightCardCatalog w-full md:w-[679px] h-auto bg-no-repeat bg-center rounded-xl">
-          <div className="flex py-[80px] justify-end pr-5 hover:cursot">
+          <div className="flex py-[80px] justify-end pr-5 hover:cursor-pointer">
             <span className="font-gilroy-bold text-[36px] md:text-[46px]">
               Свяжитесь с нами
             </span>

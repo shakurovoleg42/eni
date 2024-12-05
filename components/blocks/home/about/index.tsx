@@ -3,7 +3,7 @@ import React from "react";
 
 function About() {
   return (
-    <div className="flex flex-col mt-10 mb-10">
+    <div className="flex flex-col mt-10 mb-10 border-b-[2px]">
       <span className="w-full h-[2px] border-b-[7px] border-forms"></span>
       <div>
         <div className="mt-[38px]">
@@ -11,29 +11,43 @@ function About() {
             О КОМПАНИИ
           </span>
         </div>
-        <div className="border-collapse border-[#B9B9B9] border-t-[2px] mt-8">
-          <p className="text-[#336699]">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-            fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-            vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor
-            ornare leo, non suscipit magna interdum eu. Curabitur pellentesque
-            nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo
-            lacus at sodales sodales. Quisque sagittis orci ut diam condimentum,
-            vel euismod erat placerat. In iaculis arcu eros, eget tempus orci
-            facilisis id. Praesent lorem orci, mattis non efficitur id,
-            ultricies vel nibpus fermentumeget dictum libero. Nam finibus.Lorem
-            ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
-            Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
-            mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
-            tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo,
-            non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at
-            maximus ante fermentum sit amet. Pellentesque commodo lacus at
-            sodales sodales. Quisque sagittis orci ut diam condimentum, vel
-            euismod erat placerat. In iaculis arcu eros, eget tempus orci
-            facilisis id. Praesent lorem orci, mattis non efficitur id,
-            ultricies vel nibpus fermentumeget dictum libero. Nam finibus.Lorem
-            ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
+        <div className="border-collapse border-[#B9B9B9] border-t-[2px] mt-8 text-[#336699]">
+          <h2 className="py-4 text-[32px] font-gilroy-bold">
+            StandardOil – эксперт в смазочных материалах.
+          </h2>
+          <p className="text-[18px]">
+            Более 20 лет мы предлагаем инновационные решения для смазки
+            оборудования, транспортных средств и промышленной техники. Компания
+            StandardOil специализируется на высококачественных продуктах,
+            обеспечивая надежность и долговечность в самых сложных условиях
+            эксплуатации.
+          </p>
+          <div className="my-4">
+            <span className="text-[18px]">Почему выбирают нас:</span>
+            <ul className="text-[18px] list-disc pl-5">
+              <li className="py-1 ">
+                <span className="font-gilroy-bold">Широкий ассортимент:</span>
+                Смазочные материалы для автомобилей, сельскохозяйственной
+                техники, промышленного оборудования, энергетических и оборонных
+                предприятий, мототехники, велосипедов и водного транспорта.
+              </li>
+              <li className="py-1 ">
+                <span className="font-gilroy-bold">
+                  Профессиональная экспертиза:
+                </span>
+                Наши технические специалисты всегда готовы помочь в выборе
+                подходящего продукта и проконсультировать по любым вопросам.
+              </li>
+              <li className="py-1 ">
+                <span className="font-gilroy-bold">Складская доступность:</span>
+                Вы всегда найдете нужный продукт на нашем складе.
+              </li>
+            </ul>
+          </div>
+          <p>
+            <span className="font-gilroy-bold text-[18px]">StandardOil</span> –
+            это гарантия качества, надежности и профессиональной поддержки. Мы
+            создаем смазочные решения, которые работают на будущее.
           </p>
         </div>
         <div className="mt-[61px]">
