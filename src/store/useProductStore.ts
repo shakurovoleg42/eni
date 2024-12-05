@@ -9,7 +9,6 @@ interface Product {
 interface ProductsState {
   products: Product[];
   fetchProducts: () => Promise<void>;
-  // тут будет еще по одному продукту
 }
 
 const useProductStore = create<ProductsState>((set) => ({

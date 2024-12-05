@@ -15,9 +15,13 @@ function Form() {
           </p>
         </div>
         <div>
-          <Button className="flex text-[25px] font-openSans font-[700]">
-            Заказать звонок
-          </Button>
+        <Button className="relative overflow-hidden text-[25px] font-openSans font-[700] border-[2px] border-black bg-transparent group">
+  <span className="relative z-10">Заказать звонок</span>
+  <span className="absolute inset-0 block bg-white transform origin-left scale-x-0 transition-all duration-300 group-hover:scale-x-100"></span>
+</Button>
+
+
+
         </div>
       </div>
       <div className="flex flex-col min-h-[695px] bg-white shadow-2xl rounded-[22px] pl-[90px]">
@@ -39,17 +43,23 @@ function Form() {
             </div>
           </div>
           <div className="mt-[28px] flex flex-col">
-            <span>Текс сообщение</span>
+            <span>Текст сообщение</span>
             <Textarea className="border-[2.84px] font-gilroy" />
           </div>
-          <Button
-            type="submit"
-            variant={'submit'}
-            size={'submit'}
-            className="text-[25px] mt-[73px] font-openSans font-[700]"
-          >
-            Отправить
-          </Button>
+         <Button
+  type="submit"
+  variant={'submit'}
+  size={'submit'}
+  className="relative overflow-hidden text-[25px] mt-[73px] font-openSans font-[700] bg-[#FBD218] border-2 border-transparent group transition-all duration-300"
+>
+  <span className="relative z-10">Отправить</span>
+  {/* Псевдоэлемент для фона */}
+  <span className="absolute inset-0 block bg-white transform origin-left scale-x-0 transition-all duration-300 group-hover:scale-x-100"></span>
+  {/* Псевдоэлемент для границы */}
+  <span className="absolute inset-0 block border-2 border-black origin-left scale-x-0 transition-all duration-300 group-hover:scale-x-100"></span>
+</Button>
+
+
         </form>
       </div>
     </div>
