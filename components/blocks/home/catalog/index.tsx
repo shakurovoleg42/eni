@@ -50,13 +50,14 @@ function Catalog() {
           Автомасла AGIP/Eni имеют допуски крупнейших мировых автопроизводителей
         </h3>
         <div>
-          <ul className="flex flex-row flex-wrap gap-24">
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
             <li>
               <Image
                 src="/opel-logo.svg"
                 width={144.95}
                 height={112.26}
                 alt="auto brands"
+                className="max-w-full h-auto"
               />
             </li>
             <li>
@@ -65,6 +66,7 @@ function Catalog() {
                 width={170.53}
                 height={83.84}
                 alt="auto brands"
+                className="max-w-full h-auto"
               />
             </li>
             <li>
@@ -73,6 +75,7 @@ function Catalog() {
                 width={110.84}
                 height={112.26}
                 alt="auto brands"
+                className="max-w-full h-auto"
               />
             </li>
             <li>
@@ -81,6 +84,7 @@ function Catalog() {
                 width={198.95}
                 height={75.32}
                 alt="auto brands"
+                className="max-w-full h-auto"
               />
             </li>
             <li>
@@ -89,6 +93,7 @@ function Catalog() {
                 width={105.16}
                 height={112.26}
                 alt="auto brands"
+                className="max-w-full h-auto"
               />
             </li>
             <li>
@@ -97,6 +102,7 @@ function Catalog() {
                 width={112.26}
                 height={112.26}
                 alt="auto brands"
+                className="max-w-full h-auto"
               />
             </li>
           </ul>

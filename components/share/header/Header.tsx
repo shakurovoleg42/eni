@@ -54,11 +54,11 @@ const Header = () => {
           <SheetHeader>
             {/* <SheetTitle>Are you absolutely sure?</SheetTitle> */}
             <SheetDescription>
-              <div className="flex flex-col mt-10 text-start gap-5 text-[#2D2723] text-[14px] font-gilroy-bold">
+              <div className="flex flex-col mt-10 text-start gap-5 text-[#2D2723] text-[20px] font-gilroy-bold">
                 <SheetClose asChild>
                   <Link
                     href="/"
-                    className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg"
+                    className="border-l-[2px] border-black p-2"
                   >
                     О компании
                   </Link>
@@ -66,7 +66,7 @@ const Header = () => {
                 <SheetClose asChild>
                   <Link
                     href="/"
-                    className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg"
+                    className="border-l-[2px] border-black p-2"
                   >
                     Автомобильные моторные масла
                   </Link>
@@ -74,7 +74,7 @@ const Header = () => {
                 <SheetClose asChild>
                   <Link
                     href="/"
-                    className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg"
+                    className="border-l-[2px] border-black p-2"
                   >
                     Моторные масла для мотоциклов
                   </Link>
@@ -82,7 +82,7 @@ const Header = () => {
                 <SheetClose asChild>
                   <Link
                     href="/"
-                    className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg"
+                    className="border-l-[2px] border-black p-2"
                   >
                     Смазочные материалы
                   </Link>
@@ -90,7 +90,7 @@ const Header = () => {
                 <SheetClose asChild>
                   <Link
                     href="/"
-                    className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg"
+                    className="border-l-[2px] border-black p-2"
                   >
                     Промышленные смазочные материалы
                   </Link>
@@ -98,7 +98,7 @@ const Header = () => {
                 <SheetClose asChild>
                   <Link
                     href="/contacts"
-                    className="p-2 hover:bg-white rounded-lg"
+                    className="border-l-[2px] border-black p-2 hover:bg-white "
                   >
                     Связаться с нами
                   </Link>

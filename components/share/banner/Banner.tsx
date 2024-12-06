@@ -29,7 +29,7 @@ function Banner() {
     >
       <div className="absolute inset-0 bg-black bg-opacity-15 backdrop-blur-[1px] z-0"></div>
       <div className="max-w-[620px] relative z-10 ml-16">
-        <p className="text-[70.32px] font-gilroy-bold leading-[85px]">
+        <p className="text-[32px] leading-[54px] md:text-[70.32px] font-gilroy-bold md:leading-[85px]">
           {title}
         </p>
       </div>
