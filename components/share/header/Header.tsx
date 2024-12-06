@@ -39,9 +39,6 @@ const Header = () => {
       {/* burger menu icon */}
       <Sheet>
         <div className="flex md:hidden mt-[16px] mb-[20px] ">
-          <SheetClose asChild>
-
-          </SheetClose >
           <SheetTrigger asChild>
             <button className="w-[57px] h-[45px] bg-[#FED300] p-2 rounded-[7px]">
               <div className="flex flex-col gap-2 items-center">
@@ -58,27 +55,54 @@ const Header = () => {
             {/* <SheetTitle>Are you absolutely sure?</SheetTitle> */}
             <SheetDescription>
               <div className="flex flex-col mt-10 text-start gap-5 text-[#2D2723] text-[14px] font-gilroy-bold">
-                <Link href="/" className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg">
-                  О компании
-                </Link>
-                <Link href="/" className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg">
-                  Автомобильные моторные масла
-                </Link>
-                <Link href="/" className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg">
-                  Моторные масла для мотоциклов{" "}
-                </Link>
-                <Link href="/" className="p-2 hover:bg-[#FED300]  hover:text-white rounded-lg">
-                  Смазочные материалы
-                </Link>
-                <Link href="/" className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg">
-                  Промышленные смазочные материалы
-                </Link>
-                <Link
-                  href="/contacts"
-                  className="p-2 hover:bg-white rounded-lg"
-                >
-                  Связаться с нами
-                </Link>
+                <SheetClose asChild>
+                  <Link
+                    href="/"
+                    className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg"
+                  >
+                    О компании
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link
+                    href="/"
+                    className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg"
+                  >
+                    Автомобильные моторные масла
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link
+                    href="/"
+                    className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg"
+                  >
+                    Моторные масла для мотоциклов
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link
+                    href="/"
+                    className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg"
+                  >
+                    Смазочные материалы
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link
+                    href="/"
+                    className="p-2 hover:bg-[#FED300] hover:text-white rounded-lg"
+                  >
+                    Промышленные смазочные материалы
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link
+                    href="/contacts"
+                    className="p-2 hover:bg-white rounded-lg"
+                  >
+                    Связаться с нами
+                  </Link>
+                </SheetClose>
               </div>
             </SheetDescription>
           </SheetHeader>
