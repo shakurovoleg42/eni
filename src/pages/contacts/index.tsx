@@ -34,11 +34,11 @@ const Contacts = () => {
               Оставьте контактные данные чтобы мы могли с вами связаться
             </p>
           </div>
-          <div className="mt-[50px] flex flex-col lg:flex-row gap-[135px]">
+          <div className="mt-[50px] flex flex-col xl:flex-row gap-[135px]">
             <form
               ref={formRef}
               onSubmit={handleSubmit}
-              className="flex flex-col gap-12 w-[780px] px-5 lg:px-0"
+              className="flex flex-col gap-12 max-w-[780px] px-5 lg:px-0"
             >
               <div className="flex flex-col lg:flex-row gap-12">
                 <div>
