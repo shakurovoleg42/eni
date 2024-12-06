@@ -1,3 +1,4 @@
+import { Container } from "@/components/Container";
 import Image from "next/image";
 
 function Catalog() {
@@ -108,22 +109,25 @@ function Catalog() {
           </ul>
         </div>
       </div>
+      <Container>
       <div className="flex flex-col md:flex-row text-white mt-[120px] gap-8 md:gap-24">
-        <div className="bg-leftCardCatalog w-full md:w-[679px] h-auto bg-no-repeat bg-center rounded-2xl">
-          <div className="flex py-[80px] items-start pl-5 hover:cursor-pointer">
+        <div className="bg-leftCardCatalog w-auto xl:w-[589px] h-auto bg-no-repeat bg-center rounded-2xl">
+          <div className="flex py-[60px] items-start pl-5 hover:cursor-pointer">
             <span className="font-gilroy-bold text-[36px] md:text-[46px]">
               Заказать онлайн
             </span>
           </div>
         </div>
-        <div className="bg-rightCardCatalog w-full md:w-[679px] h-auto bg-no-repeat bg-center rounded-xl">
-          <div className="flex py-[80px] justify-end pr-5 hover:cursor-pointer">
+        <div className="bg-rightCardCatalog w-auto xl:w-[589px] h-auto bg-no-repeat bg-center rounded-xl">
+          <div className="flex py-[60px] justify-end pr-5 hover:cursor-pointer">
             <span className="font-gilroy-bold text-[36px] md:text-[46px]">
               Свяжитесь с нами
             </span>
           </div>
         </div>
       </div>
+      </Container>
+      
     </div>
   );
 }

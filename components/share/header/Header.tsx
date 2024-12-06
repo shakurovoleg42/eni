@@ -38,7 +38,7 @@ const Header = () => {
       </div>
       {/* burger menu icon */}
       <Sheet>
-        <div className="flex md:hidden mt-[16px] mb-[20px] ">
+        <div className="flex lg:hidden mt-[16px] mb-[20px] ">
           <SheetTrigger asChild>
             <button className="w-[57px] h-[45px] bg-[#FED300] p-2 rounded-[7px]">
               <div className="flex flex-col gap-2 items-center">
@@ -109,7 +109,7 @@ const Header = () => {
         </SheetContent>
       </Sheet>
       {/* Right side header */}
-      <div className="hidden md:flex bg-header rounded-t-sm">
+      <div className="hidden lg:flex bg-header rounded-t-sm">
         <div className="flex flex-row px-2 pb-2 text-center items-center gap-32">
           <div>
             <Link href="/">
