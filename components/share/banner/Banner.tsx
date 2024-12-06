@@ -25,7 +25,7 @@ function Banner() {
 
   return (
     <Container
-      className={`flex ${backgroundClass} bg-no-repeat bg-cover bg-center w-full py-44 text-white items-center relative`}
+      className={`flex ${backgroundClass} bg-no-repeat b bg-cover bg-center w-full py-44 text-white items-center relative`}
     >
       <div className="absolute inset-0 bg-black bg-opacity-15 backdrop-blur-[1px] z-0"></div>
       <div className="max-w-[620px] relative z-10 ml-16">

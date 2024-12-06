@@ -5,19 +5,21 @@ function Catalog() {
     <div className="w-full flex flex-col items-center text-black mb-[190px]">
       <span className="flex text-[34.11px] font-gilroy-bold">Каталог</span>
       <div className="flex flex-col flex-wrap xl:flex-nowrap md:flex-row gap-[85px] font-gilroy text-[34px] mt-[35px] ">
-        <div className="flex flex-col gap-0 lg:gap-20 items-center text-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between max-w-[767px] min-h-[170px] hover:cursor-pointer">
-          <div className="pl-0 xl:pl-16">
-            <span>Каталог</span>
+        <a href="#">
+          <div className="flex flex-col gap-0 lg:gap-20 items-center text-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between max-w-[767px] min-h-[170px] hover:cursor-pointer">
+            <div className="pl-0 xl:pl-16">
+              <span>Каталог</span>
+            </div>
+            <div>
+              <Image
+                src="/car-card-home1.png"
+                width={298}
+                height={81}
+                alt="car-card 1"
+              />
+            </div>
           </div>
-          <div>
-            <Image
-              src="/car-card-home1.png"
-              width={298}
-              height={81}
-              alt="car-card 1"
-            />
-          </div>
-        </div>
+        </a>
         <a target="_blank" href="https://oilproducts.eni.com/en_GB/lube-finder">
           <div className="flex flex-col gap-0 lg:gap-20 items-center text-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between max-w-[767px] min-h-[170px] hover:cursor-pointer">
             <div className="pl-0 xl:pl-16">
