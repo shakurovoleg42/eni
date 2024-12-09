@@ -56,12 +56,31 @@ function index() {
               Technical profile
             </span>
             <div className="bg-[#FBFBFB] px-6 py-3 font-inter font-[700] text-[21.36px] text-[#696969]">
-              <ul className="flex flex-col">
-                <li className="flex flex-row justify-between">
+              <ul className="flex flex-col gap-5">
+                <li className="flex flex-row justify-between border-[#696969] border-b-[1.24px] ">
                   <span>Product code:</span>
                   <span>0000000</span>
                 </li>
-                <span className="w-full mt-1 border-b-black border-[1px]"></span>
+                <li className="flex flex-row justify-between border-[#696969] border-b-[1.24px] ">
+                  <span>Name:</span>
+                  <span>product AA</span>
+                </li>
+                <li className="flex flex-row justify-between border-[#696969] border-b-[1.24px] ">
+                  <span>Gradient:</span>
+                  <span>xyz 00 - 00</span>
+                </li>
+                <li className="flex flex-row justify-between border-[#696969] border-b-[1.24px] ">
+                  <span>Description:</span>
+                  <span>Description</span>
+                </li>
+                <li className="flex flex-row justify-between border-[#696969] border-b-[1.24px] ">
+                  <span>Specifications, approval, compatiblity:</span>
+                  <span>XZ 000000 | XZ 00000| XY 00000 XYZ</span>
+                </li>
+                <li className="flex flex-row justify-between border-[#696969] border-b-[1.24px] ">
+                  <span>Applications:</span>
+                  <span>-</span>
+                </li>
               </ul>
               <button className="flex flex-row items-center gap-3 mt-5">
                 <Download />

@@ -79,6 +79,9 @@ const config: Config = {
         inter: ["Inter", "sans-serif"],
         sans: ["Open Sans", "sans-serif"],
       },
+      boxShadow: {
+        custom: "0px 0px 15.63px 2.84px #1D192921", // Кастомный стиль
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

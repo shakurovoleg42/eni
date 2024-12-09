@@ -60,7 +60,6 @@ const Contacts = () => {
                   <Input className="border-[1px] w-full max-w-[365px] py-6 px-3" />
                 </div>
               </div>
-
               <div className="mt-[30px]">
                 <button
                   type="submit"
