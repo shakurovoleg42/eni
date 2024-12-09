@@ -2,13 +2,16 @@ import React from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
+import { Container } from "../Container";
 
 function Form() {
   return (
-    <div className="flex flex-col justify-center xl:flex-row mt-28 mb-32 font-arial">
+    <Container className="flex flex-col justify-center xl:flex-row mt-0 xl:mt-28 mb-32 font-arial">
       <div className="flex flex-col max-w-[654.92px] max-h-[442px] mt-[136px] bg-[#FBD218] py-[71px] pl-2 md:pl-[99.47px] gap-11 rounded-tl-[22px] rounded-bl-[22px]">
         <div className="flex flex-col gap-9  ">
-          <p className="font-openSans font-[700] text-[25px] sm:text-[34px]">Обратная связь</p>
+          <p className="font-openSans font-[700] text-[25px] sm:text-[34px]">
+            Обратная связь
+          </p>
           <p className="text-[16px] sm:text-[20px]">
             Хотите получить более подробную информацию оставьте контакты и мы
             свяжемся с Вами!
@@ -57,7 +60,7 @@ function Form() {
           </Button>
         </form>
       </div>
-    </div>
+    </Container>
   );
 }
 

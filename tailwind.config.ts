@@ -62,7 +62,6 @@ const config: Config = {
         other: "url('/other.png')",
         leftCardCatalog: "url('/left-card-catalog.png')",
         rightCardCatalog: "url('/right-card-catalog.png')",
-
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -77,6 +76,8 @@ const config: Config = {
         "gilroy-medium": ["Gilroy-Medium ☞", "sans-serif"],
         arial: ["Arial", "sans-serif"],
         openSans: ["Open Sans", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        sans: ["Open Sans", "sans-serif"],
       },
     },
   },

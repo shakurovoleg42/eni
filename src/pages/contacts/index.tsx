@@ -38,26 +38,26 @@ const Contacts = () => {
             <form
               ref={formRef}
               onSubmit={handleSubmit}
-              className="flex flex-col gap-12 max-w-[780px] px-5 lg:px-0"
+              className="flex flex-col gap-12 max-w-[880px] px-5 lg:px-0"
             >
               <div className="flex flex-col lg:flex-row gap-12">
                 <div>
                   <p className="font-gilroy-bold ">Имя</p>
-                  <Input className="border-[1px] w-[365px] py-6 px-4" />
+                  <Input className="border-[1px] w-full max-w-[365px] py-6 px-3" />
                 </div>
                 <div>
                   <p className="font-gilroy-bold ">Фамилия</p>
-                  <Input className="border-[1px] w-[365px] py-6 px-4" />
+                  <Input className="border-[1px] w-full max-w-[365px] py-6 px-3" />
                 </div>
               </div>
               <div className="flex flex-col lg:flex-row gap-12">
                 <div>
                   <p className="font-gilroy-bold ">Почта</p>
-                  <Input className="border-[1px] w-[365px] py-6 px-4" />
+                  <Input className="border-[1px] w-full max-w-[365px] py-6 px-3" />
                 </div>
                 <div>
                   <p className="font-gilroy-bold ">Номер телефона</p>
-                  <Input className="border-[1px] w-[365px] py-6 px-4" />
+                  <Input className="border-[1px] w-full max-w-[365px] py-6 px-3" />
                 </div>
               </div>
 
