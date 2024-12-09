@@ -56,42 +56,30 @@ const Header = () => {
             <SheetDescription>
               <div className="flex flex-col mt-10 text-start gap-5 text-[#2D2723] text-[20px] font-gilroy-bold">
                 <SheetClose asChild>
-                  <Link
-                    href="/"
-                    className="border-l-[2px] border-black p-2"
-                  >
+                  <Link href="/" className="border-l-[2px] border-black p-2">
                     О компании
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
                   <Link
-                    href="/"
+                    href="/catalog/avtomobilnye-motornye-masla"
                     className="border-l-[2px] border-black p-2"
                   >
                     Автомобильные моторные масла
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link
-                    href="/"
-                    className="border-l-[2px] border-black p-2"
-                  >
+                  <Link href="/" className="border-l-[2px] border-black p-2">
                     Моторные масла для мотоциклов
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link
-                    href="/"
-                    className="border-l-[2px] border-black p-2"
-                  >
+                  <Link href="/" className="border-l-[2px] border-black p-2">
                     Смазочные материалы
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link
-                    href="/"
-                    className="border-l-[2px] border-black p-2"
-                  >
+                  <Link href="/" className="border-l-[2px] border-black p-2">
                     Промышленные смазочные материалы
                   </Link>
                 </SheetClose>

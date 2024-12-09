@@ -13,7 +13,7 @@ function index() {
           <span className="w-full my-10 border-b-black border-[1px]"></span>
           <div className="flex flex-col lg:flex-row items-center lg:items-start">
             <img
-              src="/image.png"
+              src="/test-product.png"
               alt="image"
               className="max-w-[318px] max-h-[442px]"
             />

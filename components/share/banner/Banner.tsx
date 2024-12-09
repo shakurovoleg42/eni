@@ -14,6 +14,10 @@ function Banner() {
         setBackgroundClass("bg-main");
         setTitle("Моторные масла бренда ENI");
         break;
+      case "/catalog/[slug]":
+        setBackgroundClass("bg-second");
+        setTitle("Автомобильные моторные масла");
+        break;
       case "/contacts":
         setBackgroundClass("bg-second");
         setTitle("Связаться с нами");

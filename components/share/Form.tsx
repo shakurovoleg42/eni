@@ -53,9 +53,7 @@ function Form() {
             className="relative overflow-hidden px-2 text-[18px] sm:text-[25px] mt-[73px] font-openSans font-[700] bg-[#FBD218] border-2 border-transparent group transition-all duration-300"
           >
             <span className="relative z-10">Отправить</span>
-            {/* Псевдоэлемент для фона */}
             <span className="absolute inset-0 block bg-white transform origin-left scale-x-0 transition-all duration-300 group-hover:scale-x-100"></span>
-            {/* Псевдоэлемент для границы */}
             <span className="absolute inset-0 block border-2 border-black origin-left scale-x-0 transition-all duration-300 group-hover:scale-x-100"></span>
           </Button>
         </form>
