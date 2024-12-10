@@ -7,7 +7,7 @@ const Modal = ({ open, onClose }: { open: boolean; onClose: () => void }) => {
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent>
         <form action="">
-          <div className="flex flex-row justify-between py-6 px-4 gap-[35px]">
+          <div className="flex flex-row justify-between py-6 px-4 gap-[35px] select-none">
             <div className="flex flex-col gap-3 w-full max-w-[346px] h-[355px] justify-between">
               <label htmlFor="name">
                 Название компании
