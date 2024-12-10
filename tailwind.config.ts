@@ -62,6 +62,7 @@ const config: Config = {
         other: "url('/other.png')",
         leftCardCatalog: "url('/left-card-catalog.png')",
         rightCardCatalog: "url('/right-card-catalog.png')",
+        modal: "url('/modal_image.png')",
       },
       borderRadius: {
         lg: "var(--radius)",

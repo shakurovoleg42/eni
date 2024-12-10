@@ -1,8 +1,11 @@
+import React from "react";
 import { Container } from "@/components/Container";
 import Image from "next/image";
 import Link from "next/link";
+import Modal from "@/components/Modal";
 
 function Catalog() {
+  const [isModalOpen, setModalOpen] = React.useState(false);
   return (
     <div className="w-full flex flex-col items-center text-black mb-[190px] px-8">
       <span className="flex text-[34.11px] font-gilroy-bold">Каталог</span>
@@ -111,13 +114,17 @@ function Catalog() {
         </div>
       </div>
       <Container>
-        <div className="flex flex-col md:flex-row text-white mt-[120px] gap-8 md:gap-24">
+        <div
+          onClick={() => setModalOpen(true)}
+          className="flex flex-col md:flex-row text-white mt-[120px] gap-8 md:gap-24"
+        >
           <div className="bg-leftCardCatalog w-auto xl:w-[589px] h-auto bg-no-repeat bg-center rounded-2xl">
             <div className="flex py-[60px] items-start pl-5 hover:cursor-pointer">
               <span className="font-gilroy-bold text-[36px] md:text-[46px]">
                 Заказать онлайн
               </span>
             </div>
+            <Modal open={isModalOpen} onClose={() => setModalOpen(false)} />
           </div>
           <Link href="/contacts">
             <div className="bg-rightCardCatalog w-auto xl:w-[589px] h-auto bg-no-repeat bg-center rounded-xl">
