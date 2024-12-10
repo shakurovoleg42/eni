@@ -34,7 +34,6 @@ const Footer = () => {
                 <li>
                   <Link href="/">О компании</Link>
                 </li>
-                <li></li>
               </ul>
             </div>
           </div>
@@ -75,12 +74,11 @@ const Footer = () => {
                   <Link href="/">О компании</Link>
                 </li>
                 <li>
-                  <Link href="/">Контакты</Link>
+                  <Link href="/contacts">Контакты</Link>
                 </li>
                 <li>
                   <Link href="/contacts">Связаться с нами</Link>
                 </li>
-                <li></li>
               </ul>
             </div>
           </div>

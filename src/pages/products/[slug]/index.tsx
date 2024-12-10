@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Container } from "@/components/Container";
 import Form from "@/components/share/Form";
 import { Button } from "@/components/ui/button";

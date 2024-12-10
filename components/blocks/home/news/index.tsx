@@ -2,7 +2,7 @@ import React from "react";
 
 function News() {
   return (
-    <div className="flex flex-col font-gilroy-bold">
+    <div className="flex flex-col font-gilroy-bold px-8">
       <span className="w-full h-[2px] border-b-[7px] border-forms"></span>
 
       <div className="mt-[24px]">

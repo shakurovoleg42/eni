@@ -3,7 +3,7 @@ import React from "react";
 
 function About() {
   return (
-    <div className="flex flex-col mt-10 mb-10 border-b-[2px]">
+    <div className="flex flex-col mt-10 mb-10 border-b-[2px] px-8">
       <span className="w-full h-[2px] border-b-[7px] border-forms"></span>
       <div>
         <div className="mt-[38px]">
