@@ -113,7 +113,10 @@ const Header = () => {
             <Link href="/" className="p-2 hover:bg-white rounded-lg">
               О компании
             </Link>
-            <Link href="/" className="p-2 hover:bg-white rounded-lg">
+            <Link
+              href="/catalog/avtomobilnye-motornye-masla"
+              className="p-2 hover:bg-white rounded-lg"
+            >
               Автомобильные моторные масла
             </Link>
             <Link href="/" className="p-2 hover:bg-white rounded-lg">

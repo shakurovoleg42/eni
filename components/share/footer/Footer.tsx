@@ -19,7 +19,9 @@ const Footer = () => {
         <div className="md:grid-cols-4 flex flex-row justify-between  flex-wrap gap-16 ">
           <div className="flex flex-col max-w-[246px]">
             <div className="border-collapse border-[#979797] border-b-[0.82px]">
-              <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">Навигация</span>
+              <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">
+                Навигация
+              </span>
             </div>
             <div>
               <ul className="flex flex-col text-[14px] gap-2 text-[#636363] mt-3">
@@ -38,7 +40,9 @@ const Footer = () => {
           </div>
           <div className="flex flex-col max-w-[246px]">
             <div className="border-collapse border-[#979797] border-b-[0.82px]">
-              <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">Каталог</span>
+              <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">
+                Каталог
+              </span>
             </div>
             <div>
               <ul className="flex flex-col text-[14px] gap-2 text-[#636363] mt-3">
@@ -49,7 +53,9 @@ const Footer = () => {
                   <Link href="/">Моторные масла для мотоциклов</Link>
                 </li>
                 <li>
-                  <Link href="/">Автомобильные моторные масла</Link>
+                  <Link href="/catalog/avtomobilnye-motornye-masla">
+                    Автомобильные моторные масла
+                  </Link>
                 </li>
                 <li>
                   <Link href="/">Промышленные смазочные материалы</Link>
@@ -59,7 +65,9 @@ const Footer = () => {
           </div>
           <div className="flex flex-col max-w-[246px]">
             <div className="border-collapse border-[#979797] border-b-[0.82px]">
-              <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">Полезные ссылки</span>
+              <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">
+                Полезные ссылки
+              </span>
             </div>
             <div>
               <ul className="flex flex-col text-[14px] gap-2 text-[#636363] mt-3">
@@ -78,7 +86,9 @@ const Footer = () => {
           </div>
           <div className="flex flex-col max-w-[246px]">
             <div className="border-collapse border-[#979797] border-b-[0.82px]">
-              <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">Контакты</span>
+              <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">
+                Контакты
+              </span>
             </div>
             <div>
               <ul className="flex flex-col text-[14px] gap-2 text-[#636363] mt-3">
@@ -89,10 +99,15 @@ const Footer = () => {
                   <span>Компания: STANDARDOIL ТОО</span>
                 </li>
                 <li>
-                  <span>160016, Республика Казахстан, город Шымкент, микрорайон Сайрам, дом 27/1,кв 17</span>
+                  <span>
+                    160016, Республика Казахстан, город Шымкент, микрорайон
+                    Сайрам, дом 27/1,кв 17
+                  </span>
                 </li>
                 <li>
-                  <Link href="mailto:info@standardoil.com.kz">info@standardoil.com.kz</Link>
+                  <Link href="mailto:info@standardoil.com.kz">
+                    info@standardoil.com.kz
+                  </Link>
                 </li>
               </ul>
             </div>
