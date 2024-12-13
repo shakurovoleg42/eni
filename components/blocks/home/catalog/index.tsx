@@ -62,7 +62,7 @@ function Catalog() {
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={10}
-            slidesPerView={4}
+            slidesPerView={1}
             navigation
             breakpoints={{
               640: { slidesPerView: 1, spaceBetween: 20 },
