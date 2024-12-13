@@ -1,4 +1,9 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { Container } from "@/components/Container";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,14 +47,137 @@ function Catalog() {
         </a>
       </div>
       <div className="w-full flex flex-col items-start mt-48">
+        {/* Header Line */}
         <span className="w-full h-[1px] border-b-[7px] border-forms"></span>
+
+        {/* Title */}
         <div className="mt-6">
           <span className="font-gilroy-bold text-[31.26px] text-black text-start">
             ПОПУЛЯРНЫЕ ТОВАРЫ
           </span>
         </div>
-        <div>{/* Слайдер с продуктами */}</div>
+
+        {/* Swiper Slider */}
+        <div className="w-full mt-6">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={10}
+            slidesPerView={4}
+            navigation
+            breakpoints={{
+              640: { slidesPerView: 1, spaceBetween: 20 },
+              768: { slidesPerView: 2, spaceBetween: 30 },
+              1024: { slidesPerView: 3, spaceBetween: 40 },
+            }}
+            style={{ width: "100%", height: "auto" }}
+          >
+            {/* Swiper Slides */}
+            <SwiperSlide>
+              <div className="flex flex-col items-center gap-10">
+                <strong className="text-[20px] font-bold mt-4">
+                  Eni Dicrea 46
+                </strong>
+                <img
+                  src="/test-product.png"
+                  alt="Popular Product 1"
+                  className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
+                />
+
+                <div className="flex flex-row items-center gap-4">
+                  <span className="font-gilroy-bold">15 200,00 ₽</span>
+                  <span className="p-2 border border-[#D4D4D4]">20л</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col items-center gap-10">
+                <strong className="text-[20px] font-bold mt-4">
+                  Eni Dicrea 46
+                </strong>
+                <img
+                  src="/test-product.png"
+                  alt="Popular Product 1"
+                  className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
+                />
+
+                <div className="flex flex-row items-center gap-4">
+                  <span className="font-gilroy-bold">15 200,00 ₽</span>
+                  <span className="p-2 border border-[#D4D4D4]">20л</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col items-center gap-10">
+                <strong className="text-[20px] font-bold mt-4">
+                  Eni Dicrea 46
+                </strong>
+                <img
+                  src="/test-product.png"
+                  alt="Popular Product 1"
+                  className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
+                />
+
+                <div className="flex flex-row items-center gap-4">
+                  <span className="font-gilroy-bold">15 200,00 ₽</span>
+                  <span className="p-2 border border-[#D4D4D4]">20л</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col items-center gap-10">
+                <strong className="text-[20px] font-bold mt-4">
+                  Eni Dicrea 46
+                </strong>
+                <img
+                  src="/test-product.png"
+                  alt="Popular Product 1"
+                  className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
+                />
+
+                <div className="flex flex-row items-center gap-4">
+                  <span className="font-gilroy-bold">15 200,00 ₽</span>
+                  <span className="p-2 border border-[#D4D4D4]">20л</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col items-center gap-10">
+                <strong className="text-[20px] font-bold mt-4">
+                  Eni Dicrea 46
+                </strong>
+                <img
+                  src="/test-product.png"
+                  alt="Popular Product 1"
+                  className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
+                />
+
+                <div className="flex flex-row items-center gap-4">
+                  <span className="font-gilroy-bold">15 200,00 ₽</span>
+                  <span className="p-2 border border-[#D4D4D4]">20л</span>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col items-center gap-10">
+                <strong className="text-[20px] font-bold mt-4">
+                  Eni Dicrea 46
+                </strong>
+                <img
+                  src="/test-product.png"
+                  alt="Popular Product 1"
+                  className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
+                />
+
+                <div className="flex flex-row items-center gap-4">
+                  <span className="font-gilroy-bold">15 200,00 ₽</span>
+                  <span className="p-2 border border-[#D4D4D4]">20л</span>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
+
       <div className="w-full flex flex-col items-center mt-20 gap-7 font-gilroy text-[24px] text-[#333333]">
         <h3>
           Автомасла AGIP/Eni имеют допуски крупнейших мировых автопроизводителей
