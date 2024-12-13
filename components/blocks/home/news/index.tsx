@@ -20,7 +20,6 @@ function News() {
             spaceBetween={50}
             slidesPerView={1}
             navigation
-            pagination={{ clickable: true }}
             breakpoints={{
               640: { slidesPerView: 1, spaceBetween: 20 },
               768: { slidesPerView: 2, spaceBetween: 30 },
