@@ -1,12 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Container } from "../Container";
 import Modal from "../Modal";
+import useFooterFormStore from "@/src/store/storeForms/useFooterForm";
+import { Alert } from "@mui/material";
 
 function Form() {
   const [isModalOpen, setModalOpen] = useState(false);
+  const { formData, postFooterForm } = useFooterFormStore();
+  const [showAlert, setShowAlert] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    useFooterFormStore.setState((state) => ({
+      formData: { ...state.formData, [name]: value },
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      await postFooterForm();
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 3000);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
 
   return (
     <Container className="flex flex-col justify-center xl:flex-row mt-0 xl:mt-28 mb-32 font-arial">
@@ -35,23 +62,49 @@ function Form() {
         <span className="mt-[71px] text-[25px] font-[400] leading-[36px]">
           Напишите нам и мы свяжемся с Вами!
         </span>
+        {showAlert && (
+          <Alert severity="success">
+            Мы получили Вашу заявку и скоро свяжемся с Вами.
+          </Alert>
+        )}
         <form
-          action=""
+          onSubmit={handleSubmit}
+          ref={formRef}
+          method="post"
           className="mt-[71px] flex flex-col flex-wrap justify-between pr-44 pb-[90px]"
         >
           <div className="flex flex-wrap justify-between gap-11">
             <div className="flex flex-col">
               <span>Ваше имя</span>
-              <Input className="w-[300px] border-[2.84px] font-gilroy" />
+              <Input
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                className="w-[300px] border-[2.84px] font-gilroy"
+                required
+              />
             </div>
             <div className="flex flex-col">
               <span>E-mail</span>
-              <Input className="w-[300px] border-[2.84px] font-gilroy" />
+              <Input
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="w-[300px] border-[2.84px] font-gilroy"
+                required
+              />
             </div>
           </div>
           <div className="mt-[28px] flex flex-col">
             <span>Текст сообщение</span>
-            <Textarea className="border-[2.84px] font-gilroy" />
+            <Textarea
+              name="text"
+              value={formData.text}
+              onChange={handleInputChange}
+              className="border-[2.84px] font-gilroy"
+              required
+            />
           </div>
           <Button
             type="submit"

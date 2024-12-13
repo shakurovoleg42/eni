@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 
 import { Container } from "@/components/Container";
@@ -7,17 +7,33 @@ import Banner from "@/components/share/banner/Banner";
 import { Input } from "@/components/ui/input";
 import { MoveRight } from "lucide-react";
 
+import useContactFormStore from "@/src/store/storeForms/useContactForm";
+import { Alert } from "@mui/material";
+
 const Contacts = () => {
   const formRef = useRef<HTMLFormElement>(null);
+  const { formData, postContactForm } = useContactFormStore();
+  const [showAlert, setShowAlert] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    useContactFormStore.setState((state) => ({
+      formData: { ...state.formData, [name]: value },
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (formRef.current) {
-      console.log(
-        "форма отправлена(тест по очистке инпутов не обращать на это внимание. не отправляет данные)"
-      );
-      formRef.current.reset();
+    try {
+      await postContactForm();
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 3000);
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
     }
   };
 
@@ -34,30 +50,60 @@ const Contacts = () => {
               Оставьте контактные данные чтобы мы могли с вами связаться
             </p>
           </div>
+          {showAlert && (
+            <Alert severity="success">
+              Мы получили Вашу заявку и скоро свяжемся с Вами.
+            </Alert>
+          )}
           <div className="mt-[50px] flex flex-col xl:flex-row gap-[135px]">
             <form
               ref={formRef}
               onSubmit={handleSubmit}
+              method="POST"
               className="flex flex-col gap-12 max-w-[880px] px-5 lg:px-0"
             >
               <div className="flex flex-col lg:flex-row gap-12">
                 <div>
                   <p className="font-gilroy-bold ">Имя</p>
-                  <Input className="border-[1px] w-full max-w-[365px] py-6 px-3" />
+                  <Input
+                    name="name"
+                    type="text"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="border-[1px] w-full max-w-[365px] py-6 px-3"
+                  />
                 </div>
                 <div>
                   <p className="font-gilroy-bold ">Фамилия</p>
-                  <Input className="border-[1px] w-full max-w-[365px] py-6 px-3" />
+                  <Input
+                    name="surname"
+                    type="text"
+                    value={formData.surname}
+                    onChange={handleInputChange}
+                    className="border-[1px] w-full max-w-[365px] py-6 px-3"
+                  />
                 </div>
               </div>
               <div className="flex flex-col lg:flex-row gap-12">
                 <div>
                   <p className="font-gilroy-bold ">Почта</p>
-                  <Input className="border-[1px] w-full max-w-[365px] py-6 px-3" />
+                  <Input
+                    name="email"
+                    type="text"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="border-[1px] w-full max-w-[365px] py-6 px-3"
+                  />
                 </div>
                 <div>
                   <p className="font-gilroy-bold ">Номер телефона</p>
-                  <Input className="border-[1px] w-full max-w-[365px] py-6 px-3" />
+                  <Input
+                    name="phone"
+                    type="text"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="border-[1px] w-full max-w-[365px] py-6 px-3"
+                  />
                 </div>
               </div>
               <div className="mt-[30px]">
