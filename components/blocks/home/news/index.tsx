@@ -12,7 +12,7 @@ function News() {
       <div className="flex flex-col px-8">
         <span className="w-full h-[2px] border-b-[7px] border-forms"></span>
         <div className="mt-[24px]">
-          <h3 className="text-[31.26px]">Новости</h3>
+          <h3 className="text-[31.26px] font-gilroy-bold">Новости</h3>
         </div>
         <div className="flex justify-center mt-5">
           <Swiper

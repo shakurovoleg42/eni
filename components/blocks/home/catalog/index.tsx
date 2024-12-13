@@ -82,7 +82,6 @@ function Catalog() {
                   alt="Popular Product 1"
                   className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
                 />
-
                 <div className="flex flex-row items-center gap-4">
                   <span className="font-gilroy-bold">15 200,00 ₽</span>
                   <span className="p-2 border border-[#D4D4D4]">20л</span>
@@ -99,7 +98,6 @@ function Catalog() {
                   alt="Popular Product 1"
                   className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
                 />
-
                 <div className="flex flex-row items-center gap-4">
                   <span className="font-gilroy-bold">15 200,00 ₽</span>
                   <span className="p-2 border border-[#D4D4D4]">20л</span>
@@ -116,7 +114,6 @@ function Catalog() {
                   alt="Popular Product 1"
                   className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
                 />
-
                 <div className="flex flex-row items-center gap-4">
                   <span className="font-gilroy-bold">15 200,00 ₽</span>
                   <span className="p-2 border border-[#D4D4D4]">20л</span>
@@ -133,7 +130,6 @@ function Catalog() {
                   alt="Popular Product 1"
                   className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
                 />
-
                 <div className="flex flex-row items-center gap-4">
                   <span className="font-gilroy-bold">15 200,00 ₽</span>
                   <span className="p-2 border border-[#D4D4D4]">20л</span>
@@ -150,7 +146,6 @@ function Catalog() {
                   alt="Popular Product 1"
                   className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
                 />
-
                 <div className="flex flex-row items-center gap-4">
                   <span className="font-gilroy-bold">15 200,00 ₽</span>
                   <span className="p-2 border border-[#D4D4D4]">20л</span>
@@ -167,7 +162,6 @@ function Catalog() {
                   alt="Popular Product 1"
                   className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
                 />
-
                 <div className="flex flex-row items-center gap-4">
                   <span className="font-gilroy-bold">15 200,00 ₽</span>
                   <span className="p-2 border border-[#D4D4D4]">20л</span>
