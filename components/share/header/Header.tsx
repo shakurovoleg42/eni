@@ -56,7 +56,10 @@ const Header = () => {
             <SheetDescription>
               <div className="flex flex-col mt-10 text-start gap-5 text-[#2D2723] text-[20px] font-gilroy-bold">
                 <SheetClose asChild>
-                  <Link href="/" className="border-l-[2px] border-black p-2">
+                  <Link
+                    href="/about"
+                    className="border-l-[2px] border-black p-2"
+                  >
                     О компании
                   </Link>
                 </SheetClose>
@@ -110,7 +113,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex flex-row  gap-5 text-center text-[#2D2723] text-[14px] font-gilroy-bold">
-            <Link href="/" className="p-2 hover:bg-white rounded-lg">
+            <Link href="/about" className="p-2 hover:bg-white rounded-lg">
               О компании
             </Link>
             <Link

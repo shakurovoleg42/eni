@@ -22,6 +22,10 @@ function Banner() {
         setBackgroundClass("bg-second");
         setTitle("Связаться с нами");
         break;
+      case "/about":
+        setBackgroundClass("bg-second");
+        setTitle("О нашей компании");
+        break;
       default:
         break;
     }

@@ -3,8 +3,13 @@ import { Container } from "@/components/Container";
 import Form from "@/components/share/Form";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+// import InnerImageZoom from "react-inner-image-zoom";
 
 function index() {
+  // const [productImage, setProductImage] = useState(
+  //   product.images[0] || product.image
+  // );
+
   return (
     <div>
       <Container className="flex flex-col mt-10 lg:mt-36">
@@ -18,6 +23,18 @@ function index() {
               alt="image"
               className="max-w-[318px] max-h-[442px]"
             />
+            {/* 
+              <div>
+                <InnerImageZoom
+                  src={productImage}
+                  zoomSrc={productImage}
+                  zoomType="hover"
+                  hideHint
+                  className="!flex items-center justify-center productLeft__img"
+                />
+                <MultiImage images={product.images} setImage={setProductImage} />
+              </div>
+            */}
             <div className="mt-5 lg:mt-0 lg:ml-16 text-center lg:text-start">
               <div>
                 <h1 className="font-[700] text-[22.56px] text-[#00A2FC] font-inter">

@@ -32,7 +32,7 @@ const Footer = () => {
                   <Link href="/">Каталог</Link>
                 </li>
                 <li>
-                  <Link href="/">О компании</Link>
+                  <Link href="/about">О компании</Link>
                 </li>
               </ul>
             </div>
@@ -71,7 +71,7 @@ const Footer = () => {
             <div>
               <ul className="flex flex-col text-[14px] gap-2 text-[#636363] mt-3">
                 <li>
-                  <Link href="/">О компании</Link>
+                  <Link href="/about">О компании</Link>
                 </li>
                 <li>
                   <Link href="/contacts">Контакты</Link>
