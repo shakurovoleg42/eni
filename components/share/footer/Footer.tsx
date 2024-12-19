@@ -29,7 +29,9 @@ const Footer = () => {
                   <Link href="/">Главная</Link>
                 </li>
                 <li>
-                  <Link href="/">Каталог</Link>
+                  <Link href="/catalog/avtomobilnye-motornye-masla">
+                    Каталог
+                  </Link>
                 </li>
                 <li>
                   <Link href="/about">О компании</Link>

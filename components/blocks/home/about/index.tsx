@@ -52,7 +52,7 @@ function About() {
         </div>
         <div className="mt-[61px]">
           <Link
-            href="/"
+            href="/about"
             className="text-[25.28px] font-gilroy border-b border-black"
           >
             Читать далее

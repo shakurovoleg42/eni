@@ -15,7 +15,7 @@ function Catalog() {
     <div className="w-full flex flex-col items-center text-black mb-[190px] px-8">
       <span className="flex text-[34.11px] font-gilroy-bold">Каталог</span>
       <div className="flex flex-col flex-wrap xl:flex-nowrap md:flex-row gap-[85px] font-gilroy text-[34px] mt-[35px] ">
-        <a href="#">
+        <Link href="/catalog/avtomobilnye-motornye-maslav">
           <div className="flex flex-col gap-0 lg:gap-20 items-center text-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between max-w-[767px] min-h-[170px] hover:cursor-pointer">
             <div className="pl-0 xl:pl-16">
               <span>Каталог</span>
@@ -29,7 +29,7 @@ function Catalog() {
               />
             </div>
           </div>
-        </a>
+        </Link>
         <a target="_blank" href="https://oilproducts.eni.com/en_GB/lube-finder">
           <div className="flex flex-col gap-0 lg:gap-20 items-center text-center md:flex-row border-[2px] rounded-md bg-[#F1F1F1] justify-between max-w-[767px] min-h-[170px] hover:cursor-pointer">
             <div className="pl-0 xl:pl-16">
