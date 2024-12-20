@@ -16,26 +16,29 @@ const Header = () => {
   return (
     <Container className="flex flex-col">
       {/* Left side header */}
-      <div className="flex flex-row justify-between">
-        <div>
-          <Link href="/">
+      <header>
+        <div className="flex flex-row justify-between">
+          <div>
+            <Link href="/">
+              <Image
+                src="/header-logo.svg"
+                alt="logo"
+                width={338}
+                height={105.48}
+              />
+            </Link>
+          </div>
+          <div className="mr-6">
             <Image
-              src="/header-logo.svg"
-              alt="logo"
-              width={338}
-              height={105.48}
+              src="/eni-logo.svg"
+              alt="eni logo"
+              width={296.88}
+              height={148.44}
             />
-          </Link>
+          </div>
         </div>
-        <div className="mr-6">
-          <Image
-            src="/eni-logo.svg"
-            alt="eni logo"
-            width={296.88}
-            height={148.44}
-          />
-        </div>
-      </div>
+      </header>
+
       {/* burger menu icon */}
       <Sheet>
         <div className="flex lg:hidden mt-[16px] mb-[20px] ">
