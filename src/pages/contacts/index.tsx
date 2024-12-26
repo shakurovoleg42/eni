@@ -26,9 +26,10 @@ const Contacts = () => {
     e.preventDefault();
     try {
       await postContactForm();
+      setShowAlert(true);
       setTimeout(() => {
         setShowAlert(false);
-      }, 3000);
+      }, 5000);
       if (formRef.current) {
         formRef.current.reset();
       }
@@ -40,10 +41,10 @@ const Contacts = () => {
   return (
     <Container>
       <Banner />
-      <div className="my-28 flex flex-col">
-        <div className="flex flex-col lg:flex-row gap-11">
-          <div className="flex flex-col gap-12">
-            <div className="flex flex-col gap-12">
+      <div className="my-10 flex flex-col items-center justify-center">
+        <div className="flex flex-col lg:flex-row gap-12">
+          <div className="flex flex-col">
+            <div className="flex flex-col gap-12 max-w-[700px]">
               <h1 className="font-gilroy-bold text-[54px] text-[#151515]">
                 Связаться с нами
               </h1>
@@ -51,19 +52,15 @@ const Contacts = () => {
                 Оставьте контактные данные чтобы мы могли с вами связаться
               </p>
             </div>
-            {showAlert && (
-              <Alert severity="success">
-                Мы получили Вашу заявку и скоро свяжемся с Вами.
-              </Alert>
-            )}
+
             <div className="mt-[50px] flex flex-col xl:flex-row gap-[135px]">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
                 method="POST"
-                className="flex flex-col gap-12 max-w-[880px] px-5 lg:px-0"
+                className="flex flex-col gap-5 max-w-[880px] p-5 lg:p-5 shadow-custom rounded-[22px]"
               >
-                <div className="flex flex-col lg:flex-row gap-12">
+                <div className="flex flex-col lg:flex-row gap-5 lg:gap-12">
                   <div>
                     <p className="font-gilroy-bold ">Имя</p>
                     <Input
@@ -85,7 +82,7 @@ const Contacts = () => {
                     />
                   </div>
                 </div>
-                <div className="flex flex-col lg:flex-row gap-12">
+                <div className="flex flex-col lg:flex-row gap-5 lg:gap-12">
                   <div>
                     <p className="font-gilroy-bold ">Почта</p>
                     <Input
@@ -107,10 +104,10 @@ const Contacts = () => {
                     />
                   </div>
                 </div>
-                <div className="mt-[30px]">
+                <div className="mt-[10px] flex flex-col lg:flex-row gap-6 ">
                   <button
                     type="submit"
-                    className="group relative border-black border-[2px] bg-[#FBD218] py-[4px] px-[36px] overflow-hidden transition-colors duration-300 rounded-sm"
+                    className="max-w-[150px] group relative border-black border-[2px] bg-[#FBD218] py-[4px] px-[36px] overflow-hidden transition-colors duration-300 rounded-sm"
                   >
                     <span className="relative z-10 text-black">
                       <MoveRight
@@ -121,15 +118,22 @@ const Contacts = () => {
                       />
                     </span>
                   </button>
+                  <div>
+                    {showAlert && (
+                      <Alert severity="success">
+                        Мы получили Вашу заявку и скоро свяжемся с Вами.
+                      </Alert>
+                    )}
+                  </div>
                 </div>
               </form>
             </div>
           </div>
-          <div className="flex flex-col gap-[50px]">
+          <div className="flex flex-col gap-[50px] max-w-[600px]">
             <h1 className="font-gilroy-bold text-[44px] leading-[81px]">
               Контактные данные
             </h1>
-            <p>
+            <p className="font-gilroy-medium text-[22px] text-[#151515]">
               Мы всегда рады помочь вам! Для консультаций и информации свяжитесь
               с нами любым удобным способом.
             </p>
