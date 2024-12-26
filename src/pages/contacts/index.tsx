@@ -58,39 +58,50 @@ const Contacts = () => {
                 ref={formRef}
                 onSubmit={handleSubmit}
                 method="POST"
-                className="flex flex-col gap-5 max-w-[880px] p-5 lg:p-5 shadow-custom rounded-[22px]"
+                className="flex flex-col gap-5 max-w-[880px] p-5 lg:p-5 shadow-lg rounded-[22px]"
               >
                 <div className="flex flex-col lg:flex-row gap-5 lg:gap-12">
                   <div>
-                    <p className="font-gilroy-bold ">Имя</p>
+                    <p className="font-gilroy-bold ">
+                      Имя <span className="text-[#fa4444] font-gilroy">*</span>
+                    </p>
                     <Input
                       name="name"
                       type="text"
                       value={formData.name}
                       onChange={handleInputChange}
                       className="border-[1px] w-full max-w-[365px] py-6 px-3"
+                      required
                     />
                   </div>
                   <div>
-                    <p className="font-gilroy-bold ">Фамилия</p>
+                    <p className="font-gilroy-bold ">
+                      Фамилия{" "}
+                      <span className="text-[#fa4444] font-gilroy">*</span>
+                    </p>
                     <Input
                       name="surname"
                       type="text"
                       value={formData.surname}
                       onChange={handleInputChange}
                       className="border-[1px] w-full max-w-[365px] py-6 px-3"
+                      required
                     />
                   </div>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-5 lg:gap-12">
                   <div>
-                    <p className="font-gilroy-bold ">Почта</p>
+                    <p className="font-gilroy-bold ">
+                      Почта{" "}
+                      <span className="text-[#fa4444] font-gilroy">*</span>
+                    </p>
                     <Input
                       name="email"
                       type="text"
                       value={formData.email}
                       onChange={handleInputChange}
                       className="border-[1px] w-full max-w-[365px] py-6 px-3"
+                      required
                     />
                   </div>
                   <div>
@@ -138,7 +149,7 @@ const Contacts = () => {
               с нами любым удобным способом.
             </p>
             <div className="flex flex-col text-black text-[16px] gap-6">
-              <div className="flex flex-row gap-5 items-center">
+              <div className="flex flex-row gap-5 items-center pl-2">
                 <Image
                   src="/call-icon.svg"
                   width={28}
@@ -149,7 +160,7 @@ const Contacts = () => {
                   <p>+7 (778) 818-18-44</p>
                 </a>
               </div>
-              <div className="flex flex-row gap-5 items-center">
+              <div className="flex flex-row gap-5 items-center pl-2">
                 <Image
                   src="/mail-icon.svg"
                   width={28}
@@ -160,7 +171,7 @@ const Contacts = () => {
                   <p>info@standardoil.com.kz</p>
                 </a>
               </div>
-              <div className="flex flex-row gap-5 items-start">
+              <div className="flex flex-row gap-5 items-start pl-2">
                 <Image
                   src="/location-icon.svg"
                   width={25}
