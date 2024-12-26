@@ -96,6 +96,11 @@ const Footer = () => {
                   <li>
                     <Link href="tel:77788181844">+7 (778) 818-18-44</Link>
                   </li>
+                  <li className="hover:text-[#25D366]">
+                    <Link href="https://wa.me/77788181844" target="_blank">
+                      Whatsapp &#128279;
+                    </Link>
+                  </li>
                   <li>
                     <span>Компания: STANDARDOIL ТОО</span>
                   </li>
