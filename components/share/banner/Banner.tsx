@@ -20,7 +20,7 @@ function Banner() {
         break;
       case "/contacts":
         setBackgroundClass("bg-second");
-        setTitle("Связаться с нами");
+        setTitle("Контакты");
         break;
       case "/about":
         setBackgroundClass("bg-second");

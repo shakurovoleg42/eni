@@ -17,7 +17,7 @@ const Footer = () => {
               />
             </Link>
           </div>
-          <div className="md:grid-cols-4 flex flex-row justify-between  flex-wrap gap-16 ">
+          <div className="md:grid-cols-4 flex flex-row justify-between flex-wrap gap-16 ">
             <div className="flex flex-col max-w-[246px]">
               <div className="border-collapse border-[#979797] border-b-[0.82px]">
                 <span className="text-[20.48px] leading-[22.53px] text-[#F0B000] ">

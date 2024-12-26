@@ -28,6 +28,23 @@ const Header = () => {
               />
             </Link>
           </div>
+          <div className="hidden xl:flex items-center">
+            <ul className="flex flex-row flex-wrap gap-8 text-[18px] text-[#636363] font-gilroy-bold">
+              <li className="hover:text-[#ceb435] border-b-[1px] border-[#FED300]">
+                <Link href="tel:77788181844">+7 (778) 818-18-44</Link>
+              </li>
+              <li className="hover:text-[#25D366] border-b-[1px] border-[#25D366]">
+                <Link href="https://wa.me/77788181844" target="_blank">
+                  Whatsapp
+                </Link>
+              </li>
+              <li className="hover:text-[#ceb435] border-b-[1px] border-[#FED300]">
+                <Link href="mailto:info@standardoil.com.kz">
+                  info@standardoil.com.kz
+                </Link>
+              </li>
+            </ul>
+          </div>
           <div className="mr-6">
             <Image
               src="/eni-logo.svg"
