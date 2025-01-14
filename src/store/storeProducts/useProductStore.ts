@@ -2,8 +2,10 @@ import { create } from "zustand";
 
 interface Product {
   id: number;
+  image: string;
   title: string;
-  description: string;
+  characteristics: [];
+  slug: string;
 }
 
 interface ProductsState {
@@ -15,6 +17,7 @@ const useProductStore = create<ProductsState>((set) => ({
   products: [],
   fetchProducts: async () => {
     try {
+      // await new Promise((resolve) => setTimeout(resolve, 3000)); // Delay for 3 seconds for testing spinner
       const res = await fetch("https://dummyjson.com/products", {
         method: "GET",
       });

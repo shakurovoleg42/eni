@@ -81,7 +81,18 @@ const config: Config = {
         sans: ["Open Sans", "sans-serif"],
       },
       boxShadow: {
-        custom: "0px 0px 15.63px 2.84px #1D192921", // Кастомный стиль
+        custom: "0px 0px 15.63px 2.84px #1D192921",
+      },
+
+      //Анимации
+      keyframes: {
+        zoomIn: {
+          "0%": { transform: "scale(0.5)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+      },
+      animation: {
+        zoomIn: "zoomIn 0.2s ease forwards",
       },
     },
   },
