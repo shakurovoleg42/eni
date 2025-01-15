@@ -11,7 +11,7 @@ function Spinner() {
           r="0"
           fill="none"
           stroke="rgba(254, 211, 0, 1)"
-          stroke-width="4"
+          strokeWidth="4"
         >
           <animate
             attributeName="r"
@@ -34,7 +34,7 @@ function Spinner() {
           r="0"
           fill="none"
           stroke="rgba(254, 211, 0, 1)"
-          stroke-width="4"
+          strokeWidth="4"
         >
           <animate
             attributeName="r"

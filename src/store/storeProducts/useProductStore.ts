@@ -2,32 +2,54 @@ import { create } from "zustand";
 
 interface Product {
   id: number;
-  image: string;
-  title: string;
+  category: string;
+  photo: string;
+  name: string;
+  application: string;
+  warning: string;
+  commercial_offer: string;
   characteristics: [];
+  product_code: string;
   slug: string;
 }
 
-interface ProductsState {
-  products: Product[];
-  fetchProducts: () => Promise<void>;
+interface ProductState {
+  product: Product | null;
+  isLoading: boolean;
+  error: string | null;
+  fetchProduct: (slug: string) => Promise<void>;
 }
 
-const useProductStore = create<ProductsState>((set) => ({
-  products: [],
-  fetchProducts: async () => {
+const useProductStore = create<ProductState>((set, get) => ({
+  product: null,
+  isLoading: false,
+  error: null,
+  fetchProduct: async (slug) => {
+    const { product, isLoading } = get();
+    if (product?.slug === slug || isLoading) {
+      return;
+    }
+
+    set({ isLoading: true, error: null });
+
     try {
-      // await new Promise((resolve) => setTimeout(resolve, 3000)); // Delay for 3 seconds for testing spinner
-      const res = await fetch("https://dummyjson.com/products", {
-        method: "GET",
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API}/products/` + slug,
+        {
+          method: "GET",
+        }
+      );
       if (!res.ok) {
-        throw new Error("Failed to fetch products");
+        throw new Error("Failed to fetch product");
       }
       const data = await res.json();
-      set({ products: data.products });
+      set({ product: data, isLoading: false });
     } catch (error) {
-      console.error("Error fetching products:", error);
+      console.error("Error fetching product:", error);
+      set({
+        error: error instanceof Error ? error.message : String(error),
+        isLoading: false,
+      });
     }
   },
 }));
