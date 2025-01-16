@@ -1,6 +1,5 @@
 import type { AppProps } from "next/app";
-// import localFont from "next/font/local";
-import '../../public/fonts/gilroy-bold-webfont/style.css'; // Путь к вашему CSS файлу с @font-face
+import "../../public/fonts/gilroy-bold-webfont/style.css";
 import "./globals.css";
 import Layout from "@/components/Layout";
 

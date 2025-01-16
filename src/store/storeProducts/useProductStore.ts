@@ -34,7 +34,7 @@ const useProductStore = create<ProductState>((set, get) => ({
 
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API}/products/` + slug,
+        process.env.NEXT_PUBLIC_API + "/products/" + slug,
         {
           method: "GET",
         }

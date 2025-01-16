@@ -32,7 +32,9 @@ function Product() {
   return (
     <div>
       <Container className="flex flex-col mt-10 lg:mt-36">
-        <span>Главная » {product && product.category}</span>
+        <span className="font-bold">
+          Главная » {product && product.category}
+        </span>
         {product && (
           <div className="flex flex-col items-center">
             <span className="w-full my-10 border-b-black border-[1px]"></span>
@@ -40,7 +42,7 @@ function Product() {
               <img
                 src={product.photo || "/no-image.svg"}
                 alt="image"
-                className="max-w-[318px] max-h-[442px]"
+                className="max-w-[318px] max-h-[442px] flex self-center"
               />
               {/* 
               <div>
@@ -97,7 +99,7 @@ function Product() {
             <span className="w-full h-[1px] my-10 border-b-black border-[1px]"></span>
             <div className="w-full max-w-[1300px] flex flex-col text-start">
               <span className="font-inter font-[700] text-[30.82px] text-[#696969] px-5 bg-[#F1F1EA]">
-                Technical profile
+                Технические данные
               </span>
               <div className="bg-[#FBFBFB] px-6 py-3 font-inter font-[700] text-[21.36px] text-[#696969]">
                 <ul className="flex flex-col gap-5">
@@ -128,7 +130,7 @@ function Product() {
                 </ul>
                 <button className="flex flex-row items-center gap-3 mt-5">
                   <Download />
-                  Скачать технический профиль
+                  Скачать технические данные
                 </button>
               </div>
             </div>

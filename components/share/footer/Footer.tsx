@@ -55,12 +55,24 @@ const Footer = () => {
                     <Link href="/">Моторные масла для мотоциклов</Link>
                   </li>
                   <li>
-                    <Link href="/catalog/avtomobilnye-motornye-masla">
+                    <Link
+                      href={{
+                        pathname: "/catalog/avtomobilnye-motornye-masla",
+                        query: { name: "Автомобильные%20СМ" },
+                      }}
+                    >
                       Автомобильные моторные масла
                     </Link>
                   </li>
                   <li>
-                    <Link href="/">Промышленные смазочные материалы</Link>
+                    <Link
+                      href={{
+                        pathname: "/catalog/promishlennie-smazochnie-masla",
+                        query: { name: "Промышленные%20СМ" },
+                      }}
+                    >
+                      Промышленные смазочные материалы
+                    </Link>
                   </li>
                 </ul>
               </div>

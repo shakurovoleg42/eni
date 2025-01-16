@@ -85,7 +85,10 @@ const Header = () => {
                 </SheetClose>
                 <SheetClose asChild>
                   <Link
-                    href="/catalog/avtomobilnye-motornye-masla"
+                    href={{
+                      pathname: "/catalog/avtomobilnye-motornye-masla",
+                      query: { name: "Автомобильные%20СМ" },
+                    }}
                     className="border-l-[2px] border-black p-2"
                   >
                     Автомобильные моторные масла
@@ -102,7 +105,13 @@ const Header = () => {
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href="/" className="border-l-[2px] border-black p-2">
+                  <Link
+                    href={{
+                      pathname: "/catalog/promishlennie-smazochnie-masla",
+                      query: { name: "Промышленные%20СМ" },
+                    }}
+                    className="border-l-[2px] border-black p-2"
+                  >
                     Промышленные смазочные материалы
                   </Link>
                 </SheetClose>
@@ -137,18 +146,39 @@ const Header = () => {
               О компании
             </Link>
             <Link
-              href="/catalog/avtomobilnye-motornye-masla"
+              href={{
+                pathname: "/catalog/avtomobilnye-motornye-masla",
+                query: { name: "Автомобильные%20СМ" },
+              }}
               className="p-2 hover:bg-white rounded-lg"
             >
               Автомобильные моторные масла
             </Link>
-            <Link href="/" className="p-2 hover:bg-white rounded-lg">
+            <Link
+              href={{
+                pathname: "/catalog/avtomobilnye-motornye-masla",
+                query: { name: "Автомобильные%20СМ" },
+              }}
+              className="p-2 hover:bg-white rounded-lg"
+            >
               Моторные масла для мотоциклов{" "}
             </Link>
-            <Link href="/" className="p-2 hover:bg-white rounded-lg">
+            <Link
+              href={{
+                pathname: "/catalog/promishlennie-smazochnie-masla",
+                query: { name: "Промышленные%20СМ" },
+              }}
+              className="p-2 hover:bg-white rounded-lg"
+            >
               Смазочные материалы
             </Link>
-            <Link href="/" className="p-2 hover:bg-white rounded-lg">
+            <Link
+              href={{
+                pathname: "/catalog/promishlennie-smazochnie-masla",
+                query: { name: "Промышленные%20СМ" },
+              }}
+              className="p-2 hover:bg-white rounded-lg"
+            >
               Промышленные смазочные материалы
             </Link>
             <Link href="/contacts" className="p-2 hover:bg-white rounded-lg">
