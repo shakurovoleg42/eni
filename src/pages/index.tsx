@@ -1,6 +1,6 @@
 import About from "@/components/blocks/home/about";
 import Catalog from "@/components/blocks/home/catalog";
-import News from "@/components/blocks/home/news";
+// import News from "@/components/blocks/home/news";
 import { Container } from "@/components/Container";
 import Banner from "@/components/share/banner/Banner";
 import Form from "@/components/share/Form";
@@ -28,7 +28,7 @@ export default function HomePage() {
         <Banner />
         <About />
         <Catalog />
-        <News />
+        {/* <News /> */}
         <Form />
       </Container>
     </>

@@ -8,7 +8,6 @@ import {
   SheetDescription,
   SheetHeader,
   SheetClose,
-  // SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 
@@ -72,7 +71,6 @@ const Header = () => {
 
         <SheetContent>
           <SheetHeader>
-            {/* <SheetTitle>Are you absolutely sure?</SheetTitle> */}
             <SheetDescription>
               <div className="flex flex-col mt-10 text-start gap-5 text-[#2D2723] text-[20px] font-gilroy-bold">
                 <SheetClose asChild>
@@ -161,7 +159,7 @@ const Header = () => {
               }}
               className="p-2 hover:bg-white rounded-lg"
             >
-              Моторные масла для мотоциклов{" "}
+              Моторные масла для мотоциклов
             </Link>
             <Link
               href={{

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -47,17 +48,12 @@ function Catalog() {
         </a>
       </div>
       <div className="w-full flex flex-col items-start mt-48">
-        {/* Header Line */}
         <span className="w-full h-[1px] border-b-[7px] border-forms"></span>
-
-        {/* Title */}
         <div className="mt-6">
           <span className="font-gilroy-bold text-[31.26px] text-black text-start">
             ПОПУЛЯРНЫЕ ТОВАРЫ
           </span>
         </div>
-
-        {/* Swiper Slider */}
         <div className="w-full mt-6">
           <Swiper
             modules={[Navigation, Pagination]}
@@ -71,7 +67,6 @@ function Catalog() {
             }}
             style={{ width: "100%", height: "auto" }}
           >
-            {/* Swiper Slides */}
             <SwiperSlide>
               <div className="flex flex-col items-center gap-10">
                 <strong className="text-[20px] font-bold mt-4">
