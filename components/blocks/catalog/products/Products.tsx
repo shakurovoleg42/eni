@@ -5,7 +5,7 @@ import useProductStore from "@/src/store/storeProducts/useProductsStore";
 import Spinner from "@/components/ui/spinner";
 
 interface ProductsProps {
-  name: string;
+  name: string | null;
 }
 
 function Products({ name }: ProductsProps) {
@@ -14,8 +14,11 @@ function Products({ name }: ProductsProps) {
   const fetchProducts = useProductStore((state) => state.fetchProducts);
 
   useEffect(() => {
-    fetchProducts(name);
+    if (name && name.trim() !== "") {
+      fetchProducts(name);
+    }
   }, [name, fetchProducts]);
+
   return (
     <div className="mt-6 flex flex-col xl:flex-row gap-6">
       {isLoading ? (
@@ -31,10 +34,7 @@ function Products({ name }: ProductsProps) {
               >
                 <div className="flex flex-col items-center">
                   <Link
-                    href={{
-                      pathname: `/catalog`,
-                      query: { product: product.slug },
-                    }}
+                    href={`/catalog/${product.slug}`}
                     className="flex flex-col items-center text-center"
                   >
                     <span className="font-[700] text-[18.95px] sm:text-[26.7px] text-[#00A2FC] px-6">
@@ -59,7 +59,6 @@ function Products({ name }: ProductsProps) {
             ))}
             {/* Конец карточки */}
           </div>
-          <div className="mt-20">{/* {products} */}</div>
         </div>
       )}
     </div>

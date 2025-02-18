@@ -84,7 +84,7 @@ const Header = () => {
                 <SheetClose asChild>
                   <Link
                     href={{
-                      pathname: "/catalog/avtomobilnye-motornye-masla",
+                      pathname: "/catalog",
                       query: { name: "Автомобильные%20СМ" },
                     }}
                     className="border-l-[2px] border-black p-2"
@@ -145,7 +145,7 @@ const Header = () => {
             </Link>
             <Link
               href={{
-                pathname: "/catalog/avtomobilnye-motornye-masla",
+                pathname: "/catalog",
                 query: { name: "Автомобильные%20СМ" },
               }}
               className="p-2 hover:bg-white rounded-lg"
@@ -154,7 +154,7 @@ const Header = () => {
             </Link>
             <Link
               href={{
-                pathname: "/catalog/avtomobilnye-motornye-masla",
+                pathname: "/catalog/",
                 query: { name: "Автомобильные%20СМ" },
               }}
               className="p-2 hover:bg-white rounded-lg"
@@ -163,7 +163,7 @@ const Header = () => {
             </Link>
             <Link
               href={{
-                pathname: "/catalog/promishlennie-smazochnie-masla",
+                pathname: "/catalog",
                 query: { name: "Промышленные%20СМ" },
               }}
               className="p-2 hover:bg-white rounded-lg"
@@ -172,7 +172,7 @@ const Header = () => {
             </Link>
             <Link
               href={{
-                pathname: "/catalog/promishlennie-smazochnie-masla",
+                pathname: "/catalog",
                 query: { name: "Промышленные%20СМ" },
               }}
               className="p-2 hover:bg-white rounded-lg"
