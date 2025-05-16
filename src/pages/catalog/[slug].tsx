@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { GetServerSideProps } from "next";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/ui/button";
@@ -113,9 +114,8 @@ function ProductPage({ product }: ProductPageProps) {
 
 export default ProductPage;
 
-// Функция загрузки товара по `slug` на сервере
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  const slug = params?.slug as string; // Берем slug из URL
+  const slug = params?.slug as string;
 
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API}/products/${slug}`);

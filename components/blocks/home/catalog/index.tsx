@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -10,8 +10,22 @@ import Image from "next/image";
 import Link from "next/link";
 import Modal from "@/components/Modal";
 
+import { PopularProduct } from "@/src/types/popularProducts";
+
 function Catalog() {
-  const [isModalOpen, setModalOpen] = React.useState(false);
+  const [products, setProducts] = useState<PopularProduct[]>([]);
+  const [isModalOpen, setModalOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API}/sliders`);
+      const data = await response.json();
+      setProducts(data.data.list);
+    };
+    fetchProducts();
+  }, []);
+
+  console.log(products);
   return (
     <div className="w-full flex flex-col items-center text-black mb-[190px] px-8">
       <span className="flex text-[34.11px] font-gilroy-bold">Каталог</span>
@@ -67,102 +81,41 @@ function Catalog() {
             }}
             style={{ width: "100%", height: "auto" }}
           >
-            <SwiperSlide>
-              <div className="flex flex-col items-center gap-10">
-                <strong className="text-[20px] font-bold mt-4">
-                  Eni Dicrea 46
-                </strong>
-                <img
-                  src="/test-product.png"
-                  alt="Popular Product 1"
-                  className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
-                />
-                <div className="flex flex-row items-center gap-4">
-                  <span className="font-gilroy-bold">15 200,00 ₽</span>
-                  <span className="p-2 border border-[#D4D4D4]">20л</span>
+            {products.map((product) => (
+              <SwiperSlide key={product.id}>
+                <div className="flex flex-col items-center gap-10">
+                  <strong className="text-[20px] font-bold mt-4">
+                    Eni Dicrea 46
+                  </strong>
+                  <Link href={`/catalog/${product.slug}`}>
+                    <img
+                      src={product.image || "/test-product.png"}
+                      alt="Popular Product 1"
+                      className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
+                    />
+                  </Link>
+                  <div className="flex flex-row items-center gap-4">
+                    <div className="flex flex-col gap-2 font-bold">
+                      {product.prs?.price_tenge && (
+                        <span className="font-gilroy-bold">
+                          {product.prs?.price_tenge} ₸
+                        </span>
+                      )}
+                      {product.prs?.price_euro && (
+                        <span className="font-gilroy-bold">
+                          {product.prs?.price_euro} €
+                        </span>
+                      )}
+                    </div>
+                    {product.prs?.liters_per_unit && (
+                      <span className="p-2 border border-[#D4D4D4]">
+                        {product.prs?.liters_per_unit} л
+                      </span>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex flex-col items-center gap-10">
-                <strong className="text-[20px] font-bold mt-4">
-                  Eni Dicrea 46
-                </strong>
-                <img
-                  src="/test-product.png"
-                  alt="Popular Product 1"
-                  className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
-                />
-                <div className="flex flex-row items-center gap-4">
-                  <span className="font-gilroy-bold">15 200,00 ₽</span>
-                  <span className="p-2 border border-[#D4D4D4]">20л</span>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex flex-col items-center gap-10">
-                <strong className="text-[20px] font-bold mt-4">
-                  Eni Dicrea 46
-                </strong>
-                <img
-                  src="/test-product.png"
-                  alt="Popular Product 1"
-                  className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
-                />
-                <div className="flex flex-row items-center gap-4">
-                  <span className="font-gilroy-bold">15 200,00 ₽</span>
-                  <span className="p-2 border border-[#D4D4D4]">20л</span>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex flex-col items-center gap-10">
-                <strong className="text-[20px] font-bold mt-4">
-                  Eni Dicrea 46
-                </strong>
-                <img
-                  src="/test-product.png"
-                  alt="Popular Product 1"
-                  className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
-                />
-                <div className="flex flex-row items-center gap-4">
-                  <span className="font-gilroy-bold">15 200,00 ₽</span>
-                  <span className="p-2 border border-[#D4D4D4]">20л</span>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex flex-col items-center gap-10">
-                <strong className="text-[20px] font-bold mt-4">
-                  Eni Dicrea 46
-                </strong>
-                <img
-                  src="/test-product.png"
-                  alt="Popular Product 1"
-                  className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
-                />
-                <div className="flex flex-row items-center gap-4">
-                  <span className="font-gilroy-bold">15 200,00 ₽</span>
-                  <span className="p-2 border border-[#D4D4D4]">20л</span>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex flex-col items-center gap-10">
-                <strong className="text-[20px] font-bold mt-4">
-                  Eni Dicrea 46
-                </strong>
-                <img
-                  src="/test-product.png"
-                  alt="Popular Product 1"
-                  className="max-w-[277px] max-h-[288px] p-11 border border-[#D4D4D4]"
-                />
-                <div className="flex flex-row items-center gap-4">
-                  <span className="font-gilroy-bold">15 200,00 ₽</span>
-                  <span className="p-2 border border-[#D4D4D4]">20л</span>
-                </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
