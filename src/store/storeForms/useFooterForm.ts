@@ -32,9 +32,6 @@ const useFooterFormStore = create<formData>((set) => ({
         throw new Error(`Failed to post footer form: ${res.statusText}`);
       }
 
-      const data = await res.json();
-      console.log("Response data:", data);
-
       set({ formData: { name: "", email: "", text: "" } });
     } catch (error) {
       console.error("Error posting footer form:", error);

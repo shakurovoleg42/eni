@@ -16,7 +16,6 @@ function News() {
     const fetchNews = async () => {
       const response = await fetch(`${process.env.NEXT_PUBLIC_API}/news`);
       const data = await response.json();
-      console.log(data);
       setNews(data.data.list);
     };
     fetchNews();

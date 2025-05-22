@@ -83,34 +83,34 @@ const Header = () => {
                 </SheetClose>
                 <SheetClose asChild>
                   <Link
-                    href={{
-                      pathname: "/catalog",
-                      query: { name: "Автомобильные%20СМ" },
-                    }}
+                    href="/catalog/promyslennye-sm"
+                    className="border-l-[2px] border-black p-2"
+                  >
+                    Промышленные СМ
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link
+                    href="/catalog/specialnye-produkty"
+                    className="border-l-[2px] border-black p-2"
+                  >
+                    Специальные продукты
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link
+                    href="/catalog/avtomobilnye-sm"
                     className="border-l-[2px] border-black p-2"
                   >
                     Автомобильные моторные масла
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href="/" className="border-l-[2px] border-black p-2">
-                    Моторные масла для мотоциклов
-                  </Link>
-                </SheetClose>
-                <SheetClose asChild>
-                  <Link href="/" className="border-l-[2px] border-black p-2">
-                    Смазочные материалы
-                  </Link>
-                </SheetClose>
-                <SheetClose asChild>
                   <Link
-                    href={{
-                      pathname: "/catalog/promishlennie-smazochnie-masla",
-                      query: { name: "Промышленные%20СМ" },
-                    }}
+                    href="/catalog"
                     className="border-l-[2px] border-black p-2"
                   >
-                    Промышленные смазочные материалы
+                    Посмотреть весь список категорий
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
@@ -144,40 +144,25 @@ const Header = () => {
               О компании
             </Link>
             <Link
-              href={{
-                pathname: "/catalog",
-                query: { name: "Автомобильные%20СМ" },
-              }}
+              href="/catalog/promyslennye-sm"
+              className="p-2 hover:bg-white rounded-lg"
+            >
+              Промышленные СМ
+            </Link>
+            <Link
+              href="/catalog/specialnye-produkty"
+              className="p-2 hover:bg-white rounded-lg"
+            >
+              Специальные продукты
+            </Link>
+            <Link
+              href="/catalog/avtomobilnye-sm"
               className="p-2 hover:bg-white rounded-lg"
             >
               Автомобильные моторные масла
             </Link>
-            <Link
-              href={{
-                pathname: "/catalog/",
-                query: { name: "Автомобильные%20СМ" },
-              }}
-              className="p-2 hover:bg-white rounded-lg"
-            >
-              Моторные масла для мотоциклов
-            </Link>
-            <Link
-              href={{
-                pathname: "/catalog",
-                query: { name: "Промышленные%20СМ" },
-              }}
-              className="p-2 hover:bg-white rounded-lg"
-            >
-              Смазочные материалы
-            </Link>
-            <Link
-              href={{
-                pathname: "/catalog",
-                query: { name: "Промышленные%20СМ" },
-              }}
-              className="p-2 hover:bg-white rounded-lg"
-            >
-              Промышленные смазочные материалы
+            <Link href="/catalog" className="p-2 hover:bg-white rounded-lg">
+              Посмотреть весь список категорий
             </Link>
             <Link href="/contacts" className="p-2 hover:bg-white rounded-lg">
               Связаться с нами

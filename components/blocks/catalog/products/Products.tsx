@@ -34,7 +34,7 @@ function Products({ name }: ProductsProps) {
               >
                 <div className="flex flex-col items-center">
                   <Link
-                    href={`/catalog/${product.slug}`}
+                    href={`/catalog/product/${product.slug}`}
                     className="flex flex-col items-center text-center"
                   >
                     <span className="font-[700] text-[18.95px] sm:text-[26.7px] text-[#00A2FC] px-6">

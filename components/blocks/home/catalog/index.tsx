@@ -25,7 +25,6 @@ function Catalog() {
     fetchProducts();
   }, []);
 
-  console.log(products);
   return (
     <div className="w-full flex flex-col items-center text-black mb-[190px] px-8">
       <span className="flex text-[34.11px] font-gilroy-bold">Каталог</span>
@@ -87,7 +86,7 @@ function Catalog() {
                   <strong className="text-[20px] font-bold mt-4">
                     Eni Dicrea 46
                   </strong>
-                  <Link href={`/catalog/${product.slug}`}>
+                  <Link href={`/catalog/product/${product.slug}`}>
                     <img
                       src={product.image || "/test-product.png"}
                       alt="Popular Product 1"

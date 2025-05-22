@@ -10,6 +10,7 @@ interface Product {
   name: string;
   slug: string;
   photo: string;
+  details: [{ type: string; value: string }];
   product_code: string;
   application?: string;
   warning?: string;
@@ -78,26 +79,15 @@ function ProductPage({ product }: ProductPageProps) {
             </span>
             <div className="bg-[#FBFBFB] px-6 py-3 font-bold text-[21.36px] text-[#696969]">
               <ul className="flex flex-col gap-5">
-                <li className="flex flex-row justify-between border-b border-[#696969]">
-                  <span>Product code:</span>
-                  <span>{product.product_code || "0000000"}</span>
-                </li>
-                <li className="flex flex-row justify-between border-b border-[#696969]">
-                  <span>Name:</span>
-                  <span>{product.name || "Нет данных"}</span>
-                </li>
-                <li className="flex flex-row justify-between border-b border-[#696969]">
-                  <span>Gradient:</span>
-                  <span>xyz 00 - 00</span>
-                </li>
-                <li className="flex flex-row justify-between border-b border-[#696969]">
-                  <span>Description:</span>
-                  <span>{product.application || "Описание отсутствует"}</span>
-                </li>
-                <li className="flex flex-row justify-between border-b border-[#696969]">
-                  <span>Specifications, approval, compatibility:</span>
-                  <span>XZ 000000 | XZ 00000 | XY 00000 XYZ</span>
-                </li>
+                {product.details?.map((detail, index) => (
+                  <li
+                    key={index}
+                    className="flex flex-row justify-between border-b border-[#696969]"
+                  >
+                    <span>{detail.type}:</span>
+                    <span>{detail.value}</span>
+                  </li>
+                ))}
               </ul>
               <button className="flex flex-row items-center gap-3 mt-5">
                 <Download />
@@ -122,7 +112,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     if (!res.ok) throw new Error("Failed to fetch product");
 
     const product = await res.json();
-    return { props: { product } };
+    return { props: { product: product.data } };
   } catch (error) {
     console.error("Error fetching product:", error);
     return { props: { product: null } };

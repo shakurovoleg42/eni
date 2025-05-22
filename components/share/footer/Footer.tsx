@@ -49,29 +49,21 @@ const Footer = () => {
               <div>
                 <ul className="flex flex-col text-[14px] gap-2 text-[#636363] mt-3">
                   <li>
-                    <Link href="/">Смазочные материалы</Link>
+                    <Link href="/catalog/promyslennye-sm">Промышленные СМ</Link>
                   </li>
                   <li>
-                    <Link href="/">Моторные масла для мотоциклов</Link>
+                    <Link href="/catalog/specialnye-produkty">
+                      Специальные продукты
+                    </Link>
                   </li>
                   <li>
-                    <Link
-                      href={{
-                        pathname: "/catalog/avtomobilnye-motornye-masla",
-                        query: { name: "Автомобильные%20СМ" },
-                      }}
-                    >
+                    <Link href="/catalog/avtomobilnye-sm">
                       Автомобильные моторные масла
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href={{
-                        pathname: "/catalog/promishlennie-smazochnie-masla",
-                        query: { name: "Промышленные%20СМ" },
-                      }}
-                    >
-                      Промышленные смазочные материалы
+                    <Link href="/catalog/morskie-sm">
+                      Морские смазочные материалы
                     </Link>
                   </li>
                 </ul>
