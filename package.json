@@ -2,6 +2,21 @@
   "name": "eni",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Oleg Shakurov",
+    "linkedin": "https://www.linkedin.com/in/oleg-shakurov-9550ba258/",
+    "url": "https://github.com/shakurovoleg42"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shakurovoleg42/eni.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "metal structures",
+    "industrial"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
