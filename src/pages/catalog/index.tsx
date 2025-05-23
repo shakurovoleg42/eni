@@ -33,27 +33,29 @@ const Categories = () => {
     fetchCategories();
   }, []);
   return (
-    <Container className="flex flex-col items-center justify-center my-10">
-      <div className="space-y-4">
-        <h1 className="text-3xl font-bold text-center">Категории</h1>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <Container className="flex flex-col items-center justify-center my-16 px-4">
+      <div className="space-y-10 w-full max-w-7xl">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-center drop-shadow-sm">
+          Категории
+        </h1>
+
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {isLoading && (
-            <li className="col-span-full text-center text-gray-500">
-              Loading...
+            <li className="col-span-full text-center text-gray-500 text-lg animate-pulse">
+              Загружается...
             </li>
           )}
+
           {categories.map((category) => (
-            <li
+            <Link
               key={category.id}
-              className="bg-white shadow-md rounded-lg p-4 transition-transform transform hover:scale-105"
+              href={`/catalog/${category.slug}`}
+              className="block w-full bg-gradient-to-tr from-[#fff5da] to-white border border-[#ffe59c]/40 shadow-xl rounded-3xl p-6 hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-105"
             >
-              <Link
-                href={`/catalog/${category.slug}`}
-                className="block text-lg font-semibold text-blue-600 hover:underline"
-              >
+              <span className="text-2xl sm:text-3xl font-semibold  hover:text-black hover:underline transition-colors duration-200">
                 {category.name}
-              </Link>
-            </li>
+              </span>
+            </Link>
           ))}
         </ul>
       </div>
